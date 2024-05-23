@@ -43,7 +43,7 @@ export class UserService {
         await this.mailService.sendMail(newUser.email, newUser.name);
       } catch (error) {
         console.error('Failed to send welcome email:', error);
-        throw new InternalServerErrorException('Failed to send welcome email');
+        throw new InternalServerErrorException('Failed to send welcome email',error);
       }
     }
 

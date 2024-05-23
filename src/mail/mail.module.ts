@@ -8,7 +8,7 @@ import { MailService } from './mail.service';
   exports: [MailService],
   imports: [
     ConfigModule.forRoot({
-      isGlobal: true, // Hace que las variables de entorno estén disponibles en toda la aplicación
+      isGlobal: true,
     }),
     MailerModule.forRootAsync({
       inject: [ConfigService],
